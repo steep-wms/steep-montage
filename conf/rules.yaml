@@ -1,0 +1,16 @@
+# mBackground produces two files: an image and a corresponding area image
+- name: Add area files to results of mBackground
+  target: processChainResults
+  when: (results, pc) => pc.executables.some(e => e.path.endsWith("mBackground"))
+  then: |
+    function(results, pc) {
+      let exes = pc.executables.filter(e => e.path.endsWith("mBackground"));
+      exes.forEach(e => {
+        e.arguments.forEach(a => {
+          if (a.type === "output") {
+            let id = a.variable.id;
+            results[id] = results[id].flatMap(r => [r, r.replace(/.fits$/, "_area.fits")]);
+          }
+        });
+      });
+    }
