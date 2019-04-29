@@ -2,13 +2,13 @@
   "api": "3.0.0",
   "vars": [{
     "id": "header_template",
-    "value": "/data/region.hdr"
+    "value": "/data/montage/region.hdr"
   }, {
     "id": "raw_images",
-    "value": "/data/raw_j"
+    "value": "/data/montage/raw_j"
   }, {
     "id": "raw_images_table",
-    "value": "/data/rimages_j.tbl"
+    "value": "/data/montage/rimages_j.tbl"
   }, {
     "id": "projected_images"
   }, {
