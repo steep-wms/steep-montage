@@ -1,5 +1,5 @@
 {
-  "api": "3.0.0",
+  "api": "3.1.0",
   "vars": [{
     "id": "header_template",
     "value": "/data/montage/region.hdr"
@@ -262,8 +262,6 @@
   }, {
     "id": "no_background_image"
   }, {
-    "id": "joined_images"
-  }, {
     "id": "output_images_table"
   }, {
     "id": "added_image"
@@ -293,7 +291,8 @@
       }],
       "outputs": [{
         "id": "output_image",
-        "var": "projected_image"
+        "var": "projected_image",
+        "prefix": "projected_images/"
       }]
     }]
   }, {
@@ -305,7 +304,8 @@
     }],
     "outputs": [{
       "id": "output_table",
-      "var": "projected_images_table"
+      "var": "projected_images_table",
+      "prefix": "projected_images_"
     }]
   }, {
     "type": "execute",
@@ -316,7 +316,8 @@
     }],
     "outputs": [{
       "id": "output_table",
-      "var": "overlap_table"
+      "var": "overlap_table",
+      "prefix": "overlap_"
     }]
   }, {
     "type": "execute",
@@ -327,7 +328,8 @@
     }],
     "outputs": [{
       "id": "output_directory",
-      "var": "overlap_tables"
+      "var": "overlap_tables",
+      "prefix": "split_overlap_tables_"
     }]
   }, {
     "type": "for",
@@ -350,10 +352,12 @@
       }],
       "outputs": [{
         "id": "output_stats",
-        "var": "diff_fit_stats"
+        "var": "diff_fit_stats",
+        "prefix": "diff_stats/"
       }, {
         "id": "output_image",
-        "var": "fit_output_image"
+        "var": "fit_output_image",
+        "prefix": "fit_output_images/"
       }]
     }]
   }, {
@@ -365,7 +369,8 @@
     }],
     "outputs": [{
       "id": "output_file",
-      "var": "concatenated_fits"
+      "var": "concatenated_fits",
+      "prefix": "concat_"
     }]
   }, {
     "type": "execute",
@@ -379,7 +384,8 @@
     }],
     "outputs": [{
       "id": "output_table",
-      "var": "corrections_table"
+      "var": "corrections_table",
+      "prefix": "corrections_"
     }]
   }, {
     "type": "for",
@@ -402,30 +408,21 @@
       }],
       "outputs": [{
         "id": "output_image",
-        "var": "no_background_image"
+        "var": "no_background_image",
+        "prefix": "output_images/"
       }]
-    }]
-  }, {
-    "type": "execute",
-    "service": "join",
-    "inputs": [{
-      "id": "input_file",
-      "var": "output_images"
-    }],
-    "outputs": [{
-      "id": "output_directory",
-      "var": "joined_images"
     }]
   }, {
     "type": "execute",
     "service": "mImgtbl",
     "inputs": [{
       "id": "directory",
-      "var": "joined_images"
+      "var": "output_images"
     }],
     "outputs": [{
       "id": "output_table",
-      "var": "output_images_table"
+      "var": "output_images_table",
+      "prefix": "output_images_"
     }]
   }, {
     "type": "execute",
@@ -442,7 +439,8 @@
     }],
     "outputs": [{
       "id": "output_image",
-      "var": "added_image"
+      "var": "added_image",
+      "prefix": "added_image_"
     }]
   }, {
     "type": "execute",
@@ -457,7 +455,8 @@
     }],
     "outputs": [{
       "id": "output_image",
-      "var": "shrunken_image"
+      "var": "shrunken_image",
+      "prefix": "shrunken_image_"
     }]
   }, {
     "type": "execute",
@@ -468,7 +467,8 @@
     }],
     "outputs": [{
       "id": "output_image",
-      "var": "output_image"
+      "var": "output_image",
+      "prefix": "output_image_"
     }]
   }]
 }

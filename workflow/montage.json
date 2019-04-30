@@ -1,5 +1,5 @@
 {
-  "api": "3.0.0",
+  "api": "3.1.0",
   "vars": [{
     "id": "header_template",
     "value": "/data/montage/region.hdr"

@@ -1,4 +1,4 @@
-FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:4e74b592b8be1d0346b9b82fb68f4301e6edf586
+FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:5c33aec076474f184369db9ec8b96f36a38d6e94
 
 COPY conf/rules.yaml /jobmanager/conf/rules.yaml
 COPY conf/service_metadata.yaml /jobmanager/conf/service_metadata_montage.yaml
