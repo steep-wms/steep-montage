@@ -1,13 +1,12 @@
-FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:5c33aec076474f184369db9ec8b96f36a38d6e94
+FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:0dfb4a3600d63e99068a82d83a1fd768f1be13e5
 
-COPY conf/rules.yaml /jobmanager/conf/rules.yaml
-COPY conf/service_metadata.yaml /jobmanager/conf/service_metadata_montage.yaml
+COPY conf/rules.yaml /jobmanager/conf/rules/montage.yaml
+COPY conf/services.yaml /jobmanager/conf/services/montage.yaml
 COPY src /opt/montage-helpers/
 
 USER root
 
-RUN cat /jobmanager/conf/service_metadata_montage.yaml >> /jobmanager/conf/service_metadata.yaml && \
-    echo "deb http://http.us.debian.org/debian/ testing non-free contrib main" >> /etc/apt/sources.list && \
+RUN echo "deb http://http.us.debian.org/debian/ testing non-free contrib main" >> /etc/apt/sources.list && \
     apt-get update && \
     curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     apt-get install -y --no-install-recommends build-essential nodejs g++-8 && \
