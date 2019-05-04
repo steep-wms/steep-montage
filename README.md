@@ -23,9 +23,9 @@ you know what you are doing.**
 ## Example workflows
 
 `workflow/montage.json` and `workflow/montage_parallel.json` use the data that
-you downloaded with the instructions above and calculates a greyscale image for
-the 2MASS J-band. You may extend the workflow to also calculate the H-band and
-K-band to produce a colour image.
+you downloaded and calculates a greyscale image for the 2MASS J-band.
+`workflow/montage_parallel_rgb.json` calculates an RGB image based on the
+K-, H-, and J-bands.
 
 ## Quick start
 
@@ -37,7 +37,7 @@ K-band to produce a colour image.
 
     ... wait
 
-    curl -X POST http://localhost:8080/workflows --data @workflow/montage_parallel.json
+    curl -X POST http://localhost:8080/workflows --data @workflow/montage_parallel_rgb.json
     open http://localhost:8080/workflows
 
     ... wait
@@ -45,4 +45,4 @@ K-band to produce a colour image.
     docker cp jobmanager3-montage:$(docker exec jobmanager3-montage find /tmp -name '*.jpg') .
     docker kill jobmanager3-montage
 
-![Carina Nebula](result.jpg "Carina Nebula")
+![Carina Nebula](result_rgb.jpg "Carina Nebula")
