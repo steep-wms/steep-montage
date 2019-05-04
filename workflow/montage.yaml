@@ -55,7 +55,7 @@ actions:
         var: projected_images_table
 
   - type: execute
-    service: mOverlaps
+    service: mOverlapsSeq
     inputs:
       - id: image_table
         var: projected_images_table
