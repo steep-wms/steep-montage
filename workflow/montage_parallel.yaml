@@ -233,15 +233,15 @@ vars:
   - id: projected_images
   - id: projected_images_table
   - id: overlap_table
-  - id: overlap_tables
   - id: diff_working_directory
   - id: diff_fit_stats
   - id: fit_output_image
-  - id: all_diff_fit_stats
+  - id: all_diff_fit_results
+  - id: joined_diff_fit_results
   - id: concatenated_fits
   - id: corrections_table
   - id: output_images
-  - id: overlap_tables_i
+  - id: overlap_table_i
   - id: projected_images_i
   - id: no_background_image
   - id: output_images_table
@@ -290,29 +290,17 @@ actions:
         var: overlap_table
         prefix: overlap_
 
-  - type: execute
-    service: splitOverlapTable
-    inputs:
-      - id: overlap_table
-        var: overlap_table
-    outputs:
-      - id: output_directory
-        var: overlap_tables
-        prefix: split_overlap_tables_
-
   - type: for
-    input: overlap_tables
-    enumerator: overlap_tables_i
-    output: all_diff_fit_stats
-    yieldToOutput: diff_fit_stats
+    input: overlap_table
+    enumerator: overlap_table_i
+    output: all_diff_fit_results
+    yieldToOutput: fit_output_image
     actions:
       - type: execute
         service: mDiffFit
         inputs:
-          - id: projected_images
-            var: projected_images
-          - id: overlap_table
-            var: overlap_tables_i
+          - id: input_image
+            var: overlap_table_i
           - id: header_template
             var: header_template
         outputs:
@@ -321,15 +309,26 @@ actions:
             prefix: diff_stats/
           - id: output_image
             var: fit_output_image
-            prefix: fit_output_images/
+            prefix: diff_stats/
+
+  - type: execute
+    service: joinDiffFitResults
+    inputs:
+      - id: input_file
+        var: all_diff_fit_results
+      - id: image_table
+        var: projected_images_table
+    outputs:
+      - id: output_file
+        var: joined_diff_fit_results
 
   - type: execute
     service: mConcatFit
     inputs:
-      - id: input_file
-        var: all_diff_fit_stats
+      - id: stat_files_table
+        var: joined_diff_fit_results
     outputs:
-      - id: output_file
+      - id: output_table
         var: concatenated_fits
         prefix: concat_
 

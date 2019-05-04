@@ -1,0 +1,26 @@
+# adds an "XXX_area.fits" file for every "XXX.fits" file
+- name: outputFitsImage
+  type: outputAdapter
+  scriptFile: conf/plugins/outputFitsImage.kts
+  supportedDataType: fits
+
+# an output adapter that reads a table created by mOverlaps and extracts
+# pairs of FITS images
+- name: splitOverlapTable
+  type: outputAdapter
+  scriptFile: conf/plugins/splitOverlapTable.kts
+  supportedDataType: overlapTable
+
+# overwrite output image of mDiffFit with a text file containing input image
+# pair and stats file
+- name: createDiffFitInfo
+  type: outputAdapter
+  scriptFile: conf/plugins/createDiffFitInfo.kts
+  supportedDataType: diffFit
+
+# joins results of the createDiffFitInfo output adapter to a file that can
+# be read by mConcatFit
+- name: joinDiffFitResults
+  type: outputAdapter
+  scriptFile: conf/plugins/joinDiffFitResults.kts
+  supportedDataType: joinedDiffFitResults
