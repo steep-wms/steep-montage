@@ -1,0 +1,1207 @@
+api: 3.1.0
+vars:
+  - id: header_template
+    value: /data/montage/region.hdr
+
+  - id: k_raw_images
+    value:
+      - /data/montage/raw_k/2mass-atlas-000313s-k0300009.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0870245.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0760267.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0210257.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0300033.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0850221.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0760056.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0750233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0860044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1020021.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0980021.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0230233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1010233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0980056.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1020056.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0890267.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0330221.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0860033.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1130267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0760021.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0300044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0850256.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0600267.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0580221.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0270233.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0310245.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0860009.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0320021.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0870233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0840056.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0770221.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0990256.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1000033.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1030256.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0280009.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0210221.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0220044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0750245.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0290267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0900044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1000009.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0230245.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0590021.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0270267.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0280033.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0280044.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0220009.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0900033.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1010245.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0330257.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0900009.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0220033.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0580257.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1030221.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0270245.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1000044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0990221.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0770256.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0310233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0840021.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0340021.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0610021.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0270221.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0240044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0970245.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0740233.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0290221.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1120021.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0770267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0880021.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0250245.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0210267.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0760257.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0240009.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0990267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1030267.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0600257.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0880056.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1110233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1120056.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0770021.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0240033.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0620233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1100033.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0890256.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0850267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1130256.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0270257.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0970233.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0290257.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0740245.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1100009.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0250233.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0570044.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0750044.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0760221.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0280021.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0750033.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0260021.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0600221.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0570033.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0580267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1110245.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0570009.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0620245.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0750009.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1130221.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0330267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0890221.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1100044.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0580233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0990245.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1030245.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0270221.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0310257.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0760009.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0230256.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1020044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0980044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1010221.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0760033.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0750256.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0330233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0860021.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0860056.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0750221.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0760044.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0300021.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0850233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1010256.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0970267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0980033.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1020033.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0230221.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0770245.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0980009.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0250267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1020009.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0210245.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0580245.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0220021.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0990233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1000056.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0270257.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1030233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1110267.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0320044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0870256.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0310221.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0840033.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0620267.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0590044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0900021.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0330245.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0840009.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0320009.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0850245.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0900056.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0740267.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0280021.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0590033.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0770233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0840044.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0320033.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0870221.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0590009.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1000021.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0210233.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0770033.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0610044.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0620221.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0240021.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0890245.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0340044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1130245.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0770009.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0600245.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0310267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1120044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1110221.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0880044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0870267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0880033.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1110256.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1120033.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0340009.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0250257.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0760245.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0610009.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0340033.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0880009.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1120009.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0270233.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0610033.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0290233.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0740221.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0770044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0970256.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1010267.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0260009.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0280009.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0620257.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1100056.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0890233.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1130233.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0750021.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0270267.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0280033.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0570021.fits
+      - /data/montage/raw_k/2mass-atlas-000123s-k0600233.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0260033.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0260044.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0250221.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0760233.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0280044.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0750267.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k1100021.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0230267.fits
+      - /data/montage/raw_k/2mass-atlas-980321s-k0270245.fits
+      - /data/montage/raw_k/2mass-atlas-000122s-k0740257.fits
+      - /data/montage/raw_k/2mass-atlas-000313s-k0290245.fits
+      - /data/montage/raw_k/2mass-atlas-000121s-k0970221.fits
+
+  - id: h_raw_images
+    value:
+      - /data/montage/raw_h/2mass-atlas-000121s-h1100044.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0330267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0890221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1130221.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0570009.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0750009.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0620245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1110245.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0280021.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0750033.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0570033.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0580267.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0260021.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0600221.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0570044.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0250233.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0760221.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0750044.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1100009.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0270257.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0290257.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0740245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0970233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1130256.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0850267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0890256.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1100033.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0770021.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0240033.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0620233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1120056.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1110233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0880056.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1030267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0990267.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0240009.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0600257.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0210267.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0250245.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0760257.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0880021.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1120021.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0770267.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0240044.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0610021.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0270221.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0740233.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0290221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0970245.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0340021.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0840021.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0310233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0770256.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0580257.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0220033.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0900009.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0990221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1000044.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0270245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1030221.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0330257.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0280044.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1010245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0900033.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0220009.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0900044.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0290267.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0270267.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0280033.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0590021.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0230245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1000009.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0750245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1030256.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0280009.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1000033.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0990256.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0220044.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0210221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0770221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0840056.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0870233.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0320021.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0310245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0860009.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0580221.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0600267.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0270233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0850256.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0300044.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1130267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0760021.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0890267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0860033.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0330221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1020056.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0980056.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1010233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0980021.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1020021.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0230233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0860044.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0750233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0760056.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0850221.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0300033.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0760267.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0210257.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0300009.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0870245.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0270245.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0230267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0970221.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0740257.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0290245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0750267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1100021.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0250221.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0260044.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0280044.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0760233.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0270267.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0750021.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0280033.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0600233.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0260033.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0570021.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1130233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0890233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1100056.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0260009.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1010267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0970256.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0620257.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0280009.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0270233.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0610033.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0770044.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0290233.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0740221.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0340033.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1120009.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0880009.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0250257.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0610009.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0760245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1120033.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1110256.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0870267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0880033.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0340009.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0880044.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1110221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1120044.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0310267.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0600245.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0770009.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1130245.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0340044.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0890245.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0770033.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0620221.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0240021.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0610044.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1000021.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0590009.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0210233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0870221.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0320033.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0840044.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0770233.fits
+      - /data/montage/raw_h/2mass-atlas-000122s-h0740267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0900056.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0590033.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0280021.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0320009.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0850245.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0330245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0840009.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0590044.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0620267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0900021.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0840033.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0310221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0870256.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0320044.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1110267.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0220021.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0580245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1030233.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0270257.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1000056.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0990233.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0210245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1020009.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0250267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0980009.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0770245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1020033.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0970267.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0980033.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1010256.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0230221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0850233.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0300021.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0760044.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0750221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0860056.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0860021.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0330233.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0750256.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0760033.fits
+      - /data/montage/raw_h/2mass-atlas-980321s-h0230256.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1010221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0980044.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1020044.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0310257.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0760009.fits
+      - /data/montage/raw_h/2mass-atlas-000123s-h0580233.fits
+      - /data/montage/raw_h/2mass-atlas-000313s-h0270221.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h1030245.fits
+      - /data/montage/raw_h/2mass-atlas-000121s-h0990245.fits
+
+  - id: j_raw_images
+    value:
+      - /data/montage/raw_j/2mass-atlas-000313s-j0320033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0870221.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0840044.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0770233.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0210233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1000021.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0590009.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0850245.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0320009.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0590033.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0280021.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0740267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0900056.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0900021.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0590044.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0620267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0840009.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0330245.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0270257.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1030233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1000056.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0990233.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0220021.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0580245.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0310221.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0840033.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0320044.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0870256.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1110267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0770245.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0210245.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1020009.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0250267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0980009.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0300021.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0850233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0760044.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0750221.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0860056.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0230221.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1020033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0980033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0970267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1010256.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1010221.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0980044.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1020044.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0230256.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0330233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0860021.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0750256.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0760033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1030245.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0270221.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0990245.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0580233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0760009.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0310257.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1100021.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0750267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0970221.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0290245.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0740257.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0270245.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0230267.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0280044.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0760233.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0250221.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0260044.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0260033.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0600233.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0570021.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0280033.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0750021.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0270267.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0620257.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0280009.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0260009.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1010267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0970256.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1130233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0890233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1100056.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1120009.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0880009.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0340033.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0770044.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0740221.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0290233.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0610033.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0270233.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0340009.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1120033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1110256.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0880033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0870267.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0610009.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0760245.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0250257.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0600245.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0770009.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0880044.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1110221.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1120044.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0310267.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0240021.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0620221.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0610044.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0770033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1130245.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0340044.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0890245.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0990221.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1000044.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1030221.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0270245.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0580257.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0220033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0900009.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0310233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0840021.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0770256.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0900033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1010245.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0220009.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0280044.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0330257.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0750245.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0280033.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0270267.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0590021.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0230245.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1000009.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0900044.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0290267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0770221.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0840056.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0320021.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0870233.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0220044.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0210221.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0280009.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1030256.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1000033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0990256.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0270233.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0580221.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0600267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0860009.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0310245.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1020056.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0980056.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1010233.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0300044.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0850256.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0760021.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1130267.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0330221.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0860033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0890267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0860044.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0750233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0760056.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0300033.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0850221.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0230233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0980021.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1020021.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0870245.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0300009.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0210257.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0760267.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0750009.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0620245.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0570009.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1100044.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0890221.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0330267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1130221.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0580267.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0570033.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0600221.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0260021.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0750033.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0280021.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1110245.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1100009.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0760221.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0750044.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0570044.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0250233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1130256.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0850267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0890256.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1100033.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0740245.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0290257.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0970233.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0270257.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0620233.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0240033.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0770021.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0600257.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1030267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0990267.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0240009.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1120056.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1110233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0880056.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0880021.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0770267.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j1120021.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0760257.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0210267.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0250245.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0340021.fits
+      - /data/montage/raw_j/2mass-atlas-000313s-j0290221.fits
+      - /data/montage/raw_j/2mass-atlas-000122s-j0740233.fits
+      - /data/montage/raw_j/2mass-atlas-000121s-j0970245.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0240044.fits
+      - /data/montage/raw_j/2mass-atlas-980321s-j0270221.fits
+      - /data/montage/raw_j/2mass-atlas-000123s-j0610021.fits
+
+  - id: k_projected_image
+  - id: k_raw_image
+  - id: k_projected_images
+  - id: k_projected_images_table
+  - id: k_overlap_table
+  - id: k_diff_fit_stats
+  - id: k_fit_output_image
+  - id: k_all_diff_fit_results
+  - id: k_joined_diff_fit_results
+  - id: k_concatenated_fits
+  - id: k_corrections_table
+  - id: k_output_images
+  - id: k_overlap_table_i
+  - id: k_projected_images_i
+  - id: k_no_background_image
+  - id: k_output_images_table
+  - id: k_added_image
+  - id: k_shrunken_image
+
+  - id: h_projected_image
+  - id: h_raw_image
+  - id: h_projected_images
+  - id: h_projected_images_table
+  - id: h_overlap_table
+  - id: h_diff_fit_stats
+  - id: h_fit_output_image
+  - id: h_all_diff_fit_results
+  - id: h_joined_diff_fit_results
+  - id: h_concatenated_fits
+  - id: h_corrections_table
+  - id: h_output_images
+  - id: h_overlap_table_i
+  - id: h_projected_images_i
+  - id: h_no_background_image
+  - id: h_output_images_table
+  - id: h_added_image
+  - id: h_shrunken_image
+
+  - id: j_projected_image
+  - id: j_raw_image
+  - id: j_projected_images
+  - id: j_projected_images_table
+  - id: j_overlap_table
+  - id: j_diff_fit_stats
+  - id: j_fit_output_image
+  - id: j_all_diff_fit_results
+  - id: j_joined_diff_fit_results
+  - id: j_concatenated_fits
+  - id: j_corrections_table
+  - id: j_output_images
+  - id: j_overlap_table_i
+  - id: j_projected_images_i
+  - id: j_no_background_image
+  - id: j_output_images_table
+  - id: j_added_image
+  - id: j_shrunken_image
+
+  - id: output_image
+
+  - id: shrink_factor
+    value: 5
+
+actions:
+  # K band
+  - type: for
+    input: k_raw_images
+    enumerator: k_raw_image
+    output: k_projected_images
+    yieldToOutput: k_projected_image
+    actions:
+      - type: execute
+        service: mProjectPP
+        inputs:
+          - id: input_image
+            var: k_raw_image
+          - id: header_template
+            var: header_template
+        outputs:
+          - id: output_image
+            var: k_projected_image
+            prefix: k_projected_images/
+
+  - type: execute
+    service: mImgtbl
+    inputs:
+      - id: directory
+        var: k_projected_images
+    outputs:
+      - id: output_table
+        var: k_projected_images_table
+        prefix: k_projected_images_
+
+  - type: execute
+    service: mOverlaps
+    inputs:
+      - id: image_table
+        var: k_projected_images_table
+    outputs:
+      - id: output_table
+        var: k_overlap_table
+        prefix: k_overlap_
+
+  - type: for
+    input: k_overlap_table
+    enumerator: k_overlap_table_i
+    output: k_all_diff_fit_results
+    yieldToOutput: k_fit_output_image
+    actions:
+      - type: execute
+        service: mDiffFit
+        inputs:
+          - id: input_image
+            var: k_overlap_table_i
+          - id: header_template
+            var: header_template
+        outputs:
+          - id: output_stats
+            var: k_diff_fit_stats
+            prefix: k_diff_stats/
+          - id: output_image
+            var: k_fit_output_image
+            prefix: k_diff_stats/
+
+  - type: execute
+    service: joinDiffFitResults
+    inputs:
+      - id: input_file
+        var: k_all_diff_fit_results
+      - id: image_table
+        var: k_projected_images_table
+    outputs:
+      - id: output_file
+        var: k_joined_diff_fit_results
+
+  - type: execute
+    service: mConcatFit
+    inputs:
+      - id: stat_files_table
+        var: k_joined_diff_fit_results
+    outputs:
+      - id: output_table
+        var: k_concatenated_fits
+        prefix: k_concat_
+
+  - type: execute
+    service: mBgModel
+    inputs:
+      - id: image_table
+        var: k_projected_images_table
+      - id: fitting_table
+        var: k_concatenated_fits
+    outputs:
+      - id: output_table
+        var: k_corrections_table
+        prefix: k_corrections_
+
+  - type: for
+    input: k_projected_images
+    enumerator: k_projected_images_i
+    output: k_output_images
+    yieldToOutput: k_no_background_image
+    actions:
+      - type: execute
+        service: mBackground
+        inputs:
+          - id: input_image
+            var: k_projected_images_i
+          - id: image_table
+            var: k_projected_images_table
+          - id: corrections_table
+            var: k_corrections_table
+        outputs:
+          - id: output_image
+            var: k_no_background_image
+            prefix: k_output_images/
+
+  - type: execute
+    service: mImgtbl
+    inputs:
+      - id: directory
+        var: k_output_images
+    outputs:
+      - id: output_table
+        var: k_output_images_table
+        prefix: k_output_images_
+
+  - type: execute
+    service: mAdd
+    inputs:
+      - id: reprojected_images
+        var: k_output_images
+      - id: image_table
+        var: k_output_images_table
+      - id: header_template
+        var: header_template
+    outputs:
+      - id: output_image
+        var: k_added_image
+        prefix: k_added_image_
+
+  - type: execute
+    service: mShrink
+    parameters:
+      - id: factor
+        var: shrink_factor
+    inputs:
+      - id: input_image
+        var: k_added_image
+    outputs:
+      - id: output_image
+        var: k_shrunken_image
+        prefix: k_shrunken_image_
+
+  # H band
+  - type: for
+    input: h_raw_images
+    enumerator: h_raw_image
+    output: h_projected_images
+    yieldToOutput: h_projected_image
+    actions:
+      - type: execute
+        service: mProjectPP
+        inputs:
+          - id: input_image
+            var: h_raw_image
+          - id: header_template
+            var: header_template
+        outputs:
+          - id: output_image
+            var: h_projected_image
+            prefix: h_projected_images/
+
+  - type: execute
+    service: mImgtbl
+    inputs:
+      - id: directory
+        var: h_projected_images
+    outputs:
+      - id: output_table
+        var: h_projected_images_table
+        prefix: h_projected_images_
+
+  - type: execute
+    service: mOverlaps
+    inputs:
+      - id: image_table
+        var: h_projected_images_table
+    outputs:
+      - id: output_table
+        var: h_overlap_table
+        prefix: h_overlap_
+
+  - type: for
+    input: h_overlap_table
+    enumerator: h_overlap_table_i
+    output: h_all_diff_fit_results
+    yieldToOutput: h_fit_output_image
+    actions:
+      - type: execute
+        service: mDiffFit
+        inputs:
+          - id: input_image
+            var: h_overlap_table_i
+          - id: header_template
+            var: header_template
+        outputs:
+          - id: output_stats
+            var: h_diff_fit_stats
+            prefix: h_diff_stats/
+          - id: output_image
+            var: h_fit_output_image
+            prefix: h_diff_stats/
+
+  - type: execute
+    service: joinDiffFitResults
+    inputs:
+      - id: input_file
+        var: h_all_diff_fit_results
+      - id: image_table
+        var: h_projected_images_table
+    outputs:
+      - id: output_file
+        var: h_joined_diff_fit_results
+
+  - type: execute
+    service: mConcatFit
+    inputs:
+      - id: stat_files_table
+        var: h_joined_diff_fit_results
+    outputs:
+      - id: output_table
+        var: h_concatenated_fits
+        prefix: h_concat_
+
+  - type: execute
+    service: mBgModel
+    inputs:
+      - id: image_table
+        var: h_projected_images_table
+      - id: fitting_table
+        var: h_concatenated_fits
+    outputs:
+      - id: output_table
+        var: h_corrections_table
+        prefix: h_corrections_
+
+  - type: for
+    input: h_projected_images
+    enumerator: h_projected_images_i
+    output: h_output_images
+    yieldToOutput: h_no_background_image
+    actions:
+      - type: execute
+        service: mBackground
+        inputs:
+          - id: input_image
+            var: h_projected_images_i
+          - id: image_table
+            var: h_projected_images_table
+          - id: corrections_table
+            var: h_corrections_table
+        outputs:
+          - id: output_image
+            var: h_no_background_image
+            prefix: h_output_images/
+
+  - type: execute
+    service: mImgtbl
+    inputs:
+      - id: directory
+        var: h_output_images
+    outputs:
+      - id: output_table
+        var: h_output_images_table
+        prefix: h_output_images_
+
+  - type: execute
+    service: mAdd
+    inputs:
+      - id: reprojected_images
+        var: h_output_images
+      - id: image_table
+        var: h_output_images_table
+      - id: header_template
+        var: header_template
+    outputs:
+      - id: output_image
+        var: h_added_image
+        prefix: h_added_image_
+
+  - type: execute
+    service: mShrink
+    parameters:
+      - id: factor
+        var: shrink_factor
+    inputs:
+      - id: input_image
+        var: h_added_image
+    outputs:
+      - id: output_image
+        var: h_shrunken_image
+        prefix: h_shrunken_image_
+
+  # J band
+  - type: for
+    input: j_raw_images
+    enumerator: j_raw_image
+    output: j_projected_images
+    yieldToOutput: j_projected_image
+    actions:
+      - type: execute
+        service: mProjectPP
+        inputs:
+          - id: input_image
+            var: j_raw_image
+          - id: header_template
+            var: header_template
+        outputs:
+          - id: output_image
+            var: j_projected_image
+            prefix: j_projected_images/
+
+  - type: execute
+    service: mImgtbl
+    inputs:
+      - id: directory
+        var: j_projected_images
+    outputs:
+      - id: output_table
+        var: j_projected_images_table
+        prefix: j_projected_images_
+
+  - type: execute
+    service: mOverlaps
+    inputs:
+      - id: image_table
+        var: j_projected_images_table
+    outputs:
+      - id: output_table
+        var: j_overlap_table
+        prefix: j_overlap_
+
+  - type: for
+    input: j_overlap_table
+    enumerator: j_overlap_table_i
+    output: j_all_diff_fit_results
+    yieldToOutput: j_fit_output_image
+    actions:
+      - type: execute
+        service: mDiffFit
+        inputs:
+          - id: input_image
+            var: j_overlap_table_i
+          - id: header_template
+            var: header_template
+        outputs:
+          - id: output_stats
+            var: j_diff_fit_stats
+            prefix: j_diff_stats/
+          - id: output_image
+            var: j_fit_output_image
+            prefix: j_diff_stats/
+
+  - type: execute
+    service: joinDiffFitResults
+    inputs:
+      - id: input_file
+        var: j_all_diff_fit_results
+      - id: image_table
+        var: j_projected_images_table
+    outputs:
+      - id: output_file
+        var: j_joined_diff_fit_results
+
+  - type: execute
+    service: mConcatFit
+    inputs:
+      - id: stat_files_table
+        var: j_joined_diff_fit_results
+    outputs:
+      - id: output_table
+        var: j_concatenated_fits
+        prefix: j_concat_
+
+  - type: execute
+    service: mBgModel
+    inputs:
+      - id: image_table
+        var: j_projected_images_table
+      - id: fitting_table
+        var: j_concatenated_fits
+    outputs:
+      - id: output_table
+        var: j_corrections_table
+        prefix: j_corrections_
+
+  - type: for
+    input: j_projected_images
+    enumerator: j_projected_images_i
+    output: j_output_images
+    yieldToOutput: j_no_background_image
+    actions:
+      - type: execute
+        service: mBackground
+        inputs:
+          - id: input_image
+            var: j_projected_images_i
+          - id: image_table
+            var: j_projected_images_table
+          - id: corrections_table
+            var: j_corrections_table
+        outputs:
+          - id: output_image
+            var: j_no_background_image
+            prefix: j_output_images/
+
+  - type: execute
+    service: mImgtbl
+    inputs:
+      - id: directory
+        var: j_output_images
+    outputs:
+      - id: output_table
+        var: j_output_images_table
+        prefix: j_output_images_
+
+  - type: execute
+    service: mAdd
+    inputs:
+      - id: reprojected_images
+        var: j_output_images
+      - id: image_table
+        var: j_output_images_table
+      - id: header_template
+        var: header_template
+    outputs:
+      - id: output_image
+        var: j_added_image
+        prefix: j_added_image_
+
+  - type: execute
+    service: mShrink
+    parameters:
+      - id: factor
+        var: shrink_factor
+    inputs:
+      - id: input_image
+        var: j_added_image
+    outputs:
+      - id: output_image
+        var: j_shrunken_image
+        prefix: j_shrunken_image_
+
+  # merge bands to single image
+  - type: execute
+    service: mViewer
+    inputs:
+      - id: red_input_image
+        var: k_shrunken_image
+      - id: green_input_image
+        var: h_shrunken_image
+      - id: blue_input_image
+        var: j_shrunken_image
+    outputs:
+      - id: output_image
+        var: output_image
+        prefix: output_image_

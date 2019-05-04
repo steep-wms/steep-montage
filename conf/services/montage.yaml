@@ -529,3 +529,124 @@
       label: -out
       data_type: file
       file_suffix: .jpg
+
+- id: mViewer
+  name: mViewer RGB
+  description: Create a JPEG image from one or more input FITS images
+  path: mViewer
+  runtime: other
+
+  parameters:
+    - id: true_color
+      name: True color
+      description: Enables true color
+      type: argument
+      cardinality: 1..1
+      label: -t
+      data_type: number
+      default: 2
+
+    - id: red_input_image
+      name: Red input image
+      description: Red input FITS image to convert to JPEG
+      type: input
+      cardinality: 1..1
+      label: -red
+      data_type: file
+
+    - id: r_min
+      name: R Stretch minimum
+      description: Stretch minimum for the R channel
+      type: argument
+      cardinality: 1..1
+      data_type: string
+      default: 0s
+
+    - id: r_max
+      name: R Stretch maximum
+      description: Stretch maximum for the R channel
+      type: argument
+      cardinality: 1..1
+      data_type: string
+      default: max
+
+    - id: r_mode
+      name: R Stretch mode
+      description: Stretch mode for the R channel
+      type: argument
+      cardinality: 1..1
+      data_type: string
+      default: gaussian-log
+
+    - id: green_input_image
+      name: Green input image
+      description: Red input FITS image to convert to JPEG
+      type: input
+      cardinality: 1..1
+      label: -green
+      data_type: file
+
+    - id: g_min
+      name: G Stretch minimum
+      description: Stretch minimum for the G channel
+      type: argument
+      cardinality: 1..1
+      data_type: string
+      default: 0s
+
+    - id: g_max
+      name: G Stretch maximum
+      description: Stretch maximum for the G channel
+      type: argument
+      cardinality: 1..1
+      data_type: string
+      default: max
+
+    - id: g_mode
+      name: G Stretch mode
+      description: Stretch mode for the G channel
+      type: argument
+      cardinality: 1..1
+      data_type: string
+      default: gaussian-log
+
+    - id: blue_input_image
+      name: Blue input image
+      description: Blue input FITS image to convert to JPEG
+      type: input
+      cardinality: 1..1
+      label: -blue
+      data_type: file
+
+    - id: b_min
+      name: B Stretch minimum
+      description: Stretch minimum for the B channel
+      type: argument
+      cardinality: 1..1
+      data_type: string
+      default: 0s
+
+    - id: b_max
+      name: B Stretch maximum
+      description: Stretch maximum for the B channel
+      type: argument
+      cardinality: 1..1
+      data_type: string
+      default: max
+
+    - id: b_mode
+      name: B Stretch mode
+      description: Stretch mode for the B channel
+      type: argument
+      cardinality: 1..1
+      data_type: string
+      default: gaussian-log
+
+    - id: output_image
+      name: Output image
+      description: Output image
+      type: output
+      cardinality: 1..1
+      label: -out
+      data_type: file
+      file_suffix: .jpg

@@ -1,9 +1,5 @@
 FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:0a58ba91754c78747bc9f50de60383ae3f3d8271
 
-COPY conf/plugins/* /jobmanager/conf/plugins/
-COPY conf/services/montage.yaml /jobmanager/conf/services/montage.yaml
-COPY src /opt/montage-helpers/
-
 USER root
 
 RUN apt-get update && \
@@ -19,5 +15,9 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 USER jobmanager
+
+COPY conf/plugins/* /jobmanager/conf/plugins/
+COPY conf/services/montage.yaml /jobmanager/conf/services/montage.yaml
+COPY src /opt/montage-helpers/
 
 ENV PATH="/opt/Montage/bin:/opt/montage-helpers:${PATH}"
