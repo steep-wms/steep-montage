@@ -24,3 +24,9 @@
   type: outputAdapter
   scriptFile: conf/plugins/joinDiffFitResults.kts
   supportedDataType: joinedDiffFitResults
+
+# ignores certain errors from mDiffFit
+- name: ignoreDiffFitError
+  type: runtime
+  scriptFile: conf/plugins/ignoreDiffFitError.kts
+  supportedRuntime: ignoreDiffFitError

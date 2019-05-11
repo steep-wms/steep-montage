@@ -1,4 +1,4 @@
-FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:266510d3e91ce4c8ea17c6dff72a531f9bbef449
+FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:0f0c69da30c4d2cb56321f9db219291fcd9a943a
 
 USER root
 
@@ -18,6 +18,5 @@ USER jobmanager
 
 COPY conf/plugins/* /jobmanager/conf/plugins/
 COPY conf/services/montage.yaml /jobmanager/conf/services/montage.yaml
-COPY src /opt/montage-helpers/
 
-ENV PATH="/opt/Montage/bin:/opt/montage-helpers:${PATH}"
+ENV PATH="/opt/Montage/bin:${PATH}"

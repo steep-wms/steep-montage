@@ -148,8 +148,8 @@
 - id: mDiffFit
   name: mDiffFit
   description: Runs both mDiff and mFitplane on an mOverlaps pair
-  path: mDiffFit.sh
-  runtime: other
+  path: mDiffFit
+  runtime: ignoreDiffFitError
 
   parameters:
     - id: output_stats
