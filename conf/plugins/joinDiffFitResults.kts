@@ -1,3 +1,4 @@
+import helper.FileSystemUtils
 import io.vertx.core.Vertx
 import io.vertx.core.buffer.Buffer
 import io.vertx.core.parsetools.RecordParser
@@ -73,7 +74,9 @@ suspend fun <T> parseTable(table: String, vertx: Vertx, f: (Map<String, String>)
 suspend fun joinDiffFitResults(output: Argument, processChain: ProcessChain,
     vertx: Vertx): List<Any> {
   val exec = processChain.executables.find { e -> e.arguments.any { it === output } }!!
-  val inputFiles = exec.arguments.filter { it.id == "input_file" }.map { it.variable.value }
+  val inputDirectory = exec.arguments.find { it.id == "input_directory" }!!.variable.value
+  val inputFiles = FileSystemUtils.readRecursive(inputDirectory, vertx.fileSystem())
+      .filter { it.endsWith(".fits") && !it.endsWith("_area.fits") }
   val imageTable = exec.arguments.find { it.id == "image_table" }!!.variable.value
   val outputFile = output.variable.value
 

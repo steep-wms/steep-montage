@@ -236,12 +236,12 @@
   runtime: other
 
   parameters:
-    - id: input_file
-      name: Input file
-      description: A file created by the createDiffFitInfo output adapter
+    - id: input_directory
+      name: Input directory
+      description: A directory with .fits files created by the createDiffFitInfo output adapter
       type: input
-      cardinality: 1..n
-      data_type: file
+      cardinality: 1..1
+      data_type: directory
 
     - id: image_table
       name: Image table

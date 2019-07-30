@@ -804,7 +804,7 @@ actions:
   - type: execute
     service: joinDiffFitResults
     inputs:
-      - id: input_file
+      - id: input_directory
         var: k_all_diff_fit_results
       - id: image_table
         var: k_projected_images_table
@@ -954,7 +954,7 @@ actions:
   - type: execute
     service: joinDiffFitResults
     inputs:
-      - id: input_file
+      - id: input_directory
         var: h_all_diff_fit_results
       - id: image_table
         var: h_projected_images_table
@@ -1104,7 +1104,7 @@ actions:
   - type: execute
     service: joinDiffFitResults
     inputs:
-      - id: input_file
+      - id: input_directory
         var: j_all_diff_fit_results
       - id: image_table
         var: j_projected_images_table

@@ -314,7 +314,7 @@ actions:
   - type: execute
     service: joinDiffFitResults
     inputs:
-      - id: input_file
+      - id: input_directory
         var: j_all_diff_fit_results
       - id: image_table
         var: j_projected_images_table
