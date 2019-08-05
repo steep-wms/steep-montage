@@ -14,7 +14,7 @@ RUN apt-get update && \
     patch -p 0 < ../Montage-v6.0_mAdd.patch && \
     make && \
     apt-get purge -y build-essential && \
-    apt-get autoremove && \
+    apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
