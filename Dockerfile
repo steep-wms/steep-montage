@@ -1,4 +1,4 @@
-FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:9a3df88caef4325964910518c430111d2032c461
+FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:d29b0fcd134726388821ad2fb85b8244a626fe85
 
 USER root
 
@@ -23,4 +23,5 @@ USER jobmanager
 COPY conf/plugins/* /jobmanager/conf/plugins/
 COPY conf/services/montage.yaml /jobmanager/conf/services/montage.yaml
 
+ENV JAVA_OPTS="-Xmx8192m -Xms1024m -Dvertx.disableDnsResolver=true"
 ENV PATH="/opt/Montage/bin:${PATH}"
