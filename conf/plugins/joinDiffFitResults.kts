@@ -1,6 +1,7 @@
 import helper.FileSystemUtils
 import io.vertx.core.Vertx
 import io.vertx.core.buffer.Buffer
+import io.vertx.core.json.JsonObject
 import io.vertx.core.parsetools.RecordParser
 import io.vertx.kotlin.core.file.OpenOptions
 import io.vertx.kotlin.core.file.closeAwait
@@ -10,6 +11,7 @@ import io.vertx.kotlin.core.file.writeFileAwait
 import io.vertx.kotlin.core.json.json
 import io.vertx.kotlin.core.json.obj
 import io.vertx.kotlin.coroutines.toChannel
+import java.io.File
 import model.processchain.Argument
 import model.processchain.ProcessChain
 
@@ -75,8 +77,9 @@ suspend fun joinDiffFitResults(output: Argument, processChain: ProcessChain,
     vertx: Vertx): List<Any> {
   val exec = processChain.executables.find { e -> e.arguments.any { it === output } }!!
   val inputDirectory = exec.arguments.find { it.id == "input_directory" }!!.variable.value
-  val inputFiles = FileSystemUtils.readRecursive(inputDirectory, vertx.fileSystem())
-      .filter { it.endsWith(".fits") && !it.endsWith("_area.fits") }
+  val jsonDir = File(File(inputDirectory), "json").path
+  val inputFiles = FileSystemUtils.readRecursive(jsonDir, vertx.fileSystem())
+      .filter { it.endsWith(".json") }
   val imageTable = exec.arguments.find { it.id == "image_table" }!!.variable.value
   val outputFile = output.variable.value
 
@@ -84,8 +87,10 @@ suspend fun joinDiffFitResults(output: Argument, processChain: ProcessChain,
     it.getValue("fname") to it.getValue("cntr") }.toMap()
 
   val fs = vertx.fileSystem()
-  val entries = inputFiles.map { inputFile ->
-    val obj = fs.readFileAwait(inputFile).toJsonObject()
+  val entries = inputFiles.flatMap { inputFile ->
+    val lines = fs.readFileAwait(inputFile).toString().split("\n")
+    lines.filter { !it.isEmpty() }.map { JsonObject(it) }
+  }.map { obj ->
     val cntr1 = projectedImages.getValue(obj.getString("plus"))
     val cntr2 = projectedImages.getValue(obj.getString("minus"))
     json {

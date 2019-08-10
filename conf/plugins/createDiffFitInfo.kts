@@ -1,7 +1,13 @@
 import io.vertx.core.Vertx
-import io.vertx.kotlin.core.file.writeFileAwait
+import io.vertx.kotlin.core.file.OpenOptions
+import io.vertx.kotlin.core.file.closeAwait
+import io.vertx.kotlin.core.file.deleteAwait
+import io.vertx.kotlin.core.file.existsAwait
+import io.vertx.kotlin.core.file.mkdirsAwait
+import io.vertx.kotlin.core.file.openAwait
 import io.vertx.kotlin.core.json.json
 import io.vertx.kotlin.core.json.obj
+import java.io.File
 import model.processchain.Argument
 import model.processchain.ProcessChain
 
@@ -20,7 +26,19 @@ suspend fun createDiffFitInfo(output: Argument, processChain: ProcessChain,
     )
   }
 
-  vertx.fileSystem().writeFileAwait(outputImage, result.toBuffer())
+  val fs = vertx.fileSystem()
+  // fs.writeFileAwait(outputImage, result.toBuffer())
+  fs.deleteAwait(outputImage)
+  val areaFile = outputImage.replace(".fits", "_area.fits")
+  if (fs.existsAwait(areaFile)) {
+    fs.deleteAwait(areaFile)
+  }
+  val jsonDir = File(File(outputImage).parentFile, "json")
+  fs.mkdirsAwait(jsonDir.path)
+  val f = fs.openAwait(File(jsonDir, "${Main.agentId}.json").path,
+      OpenOptions(append = true))
+  f.write(result.toBuffer().appendString("\n"))
+  f.closeAwait()
 
   return listOf(output.variable.value)
 }
