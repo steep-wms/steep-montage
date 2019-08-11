@@ -1,4 +1,4 @@
-FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:d29b0fcd134726388821ad2fb85b8244a626fe85
+FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:379871d566fdedecc25f83df6b18a553743d3a05
 
 USER root
 
