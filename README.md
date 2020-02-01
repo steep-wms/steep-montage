@@ -1,11 +1,8 @@
-# JobManager 3 and the Montage workflow
+# Steep and the Montage workflow
 
 This repository contains everything you need to run the
-[Montage workflow](http://montage.ipac.caltech.edu/) with the JobManager 3
-(except for the data).
-
-Have a look at the Dockerfile for details about how to configure the
-environment and the JobManager.
+[Montage workflow](http://montage.ipac.caltech.edu/) with
+[Steep](https://github.com/steep-wms/steep).
 
 ## Download test data
 
@@ -30,10 +27,10 @@ K-, H-, and J-bands.
 ## Quick start
 
     ./download_data.sh
-    docker build -t jobmanager3-montage .
-    docker run --name jobmanager3-montage --rm -d -p 8080:8080 \
-      -e JOBMANAGER_HTTP_HOST=0.0.0.0 -v $(pwd)/data:/data/montage \
-      jobmanager3-montage
+    docker build -t steep-montage .
+    docker run --name steep-montage --rm -d -p 8080:8080 \
+      -e STEEP_HTTP_HOST=0.0.0.0 -v $(pwd)/data:/data/montage \
+      steep-montage
 
     ... wait
 
@@ -42,8 +39,8 @@ K-, H-, and J-bands.
 
     ... wait
 
-    docker cp jobmanager3-montage:$(docker exec jobmanager3-montage find /tmp -name '*.jpg') .
-    docker kill jobmanager3-montage
+    docker cp steep-montage:$(docker exec steep-montage find /tmp -name '*.jpg') .
+    docker kill steep-montage
 
 ![Carina Nebula](result_rgb.jpg "Carina Nebula")
 

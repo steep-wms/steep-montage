@@ -1,4 +1,4 @@
-FROM geocode.igd.fraunhofer.de:4567/jobmanager/jobmanager3:e6619ff112e5c98be286068933f00f48275e6d37
+FROM steep/steep:unstable
 
 USER root
 
@@ -18,10 +18,10 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-USER jobmanager
+USER steep
 
-COPY conf/plugins/* /jobmanager/conf/plugins/
-COPY conf/services/montage.yaml /jobmanager/conf/services/montage.yaml
+COPY conf/plugins/* /steep/conf/plugins/
+COPY conf/services/montage.yaml /steep/conf/services/montage.yaml
 
 ENV JAVA_OPTS="-Xmx8192m -Xms1024m -Dvertx.disableDnsResolver=true"
 ENV PATH="/opt/Montage/bin:${PATH}"
