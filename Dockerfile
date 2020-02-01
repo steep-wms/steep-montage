@@ -5,7 +5,7 @@ USER root
 COPY Montage-v6.0_mAdd.patch /opt/Montage-v6.0_mAdd.patch
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends build-essential && \
+    apt-get install -y --no-install-recommends build-essential aria2 && \
     cd /opt && \
     wget http://montage.ipac.caltech.edu/download/Montage_v6.0.tar.gz && \
     tar xfz Montage_v6.0.tar.gz && \
@@ -17,6 +17,9 @@ RUN apt-get update && \
     apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+RUN mkdir /download
+COPY download_data.sh /download
 
 USER steep
 

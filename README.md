@@ -11,10 +11,10 @@ download data first. The `download_data.sh` script fetches example data for
 a 2.8 square degrees mosaic of 2MASS images (J-, H-, and K-band) centred on
 NGC 3372 ([Carina Nebula](https://en.wikipedia.org/wiki/Carina_Nebula)).
 
-NOTE: The download will take quite some time (30 minutes or so) and the
-dataset has a total size of about 1.5 GB.
+NOTE: The dataset has a total size of about 1.5 GB and the download will take
+quite some time (depending on your Internet connection).
 
-**IMPORTANT: the script deletes the `data` directory if it exists! Make sure
+**IMPORTANT: the script deletes the contents of the `data` directory! Make sure
 you know what you are doing.**
 
 ## Example workflows
@@ -26,11 +26,16 @@ K-, H-, and J-bands.
 
 ## Quick start
 
-    ./download_data.sh
+    docker run -it -v $PWD/data:/download/data \
+      --entrypoint /download/download_data.sh \
+      steep/steep-montage
+
+    ... wait
+
     docker build -t steep-montage .
     docker run --name steep-montage --rm -d -p 8080:8080 \
       -e STEEP_HTTP_HOST=0.0.0.0 -v $(pwd)/data:/data/montage \
-      steep-montage
+      steep/steep-montage
 
     ... wait
 
