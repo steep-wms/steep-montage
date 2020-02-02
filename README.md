@@ -6,7 +6,7 @@ This repository demonstrates how to run the
 
 ## Step 1: Download test data
 
-Before you can run the workflow, you need to download some data first. The
+Before you can run the workflow, you need to download some data. The
 `download_data.sh` script fetches files for a 2.8 square degrees mosaic of
 2MASS images (J-, H-, and K-band) centred on
 NGC 3372 ([Carina Nebula](https://en.wikipedia.org/wiki/Carina_Nebula)).
@@ -22,7 +22,7 @@ Otherwise, run the script inside a Docker container:
       --entrypoint /download/download_data.sh \
       steep/steep-montage
 
-*NOTE*: The dataset has a total size of about *1.3 GB*. The download will take
+*NOTE:* The dataset has a total size of about *1.3 GB*. The download will take
 quite some time (depending on your Internet connection).
 
 **IMPORTANT: the script deletes the contents of the `data` directory! Make sure
@@ -49,7 +49,7 @@ We prepared the following workflows for you:
 <dt>workflow/montage.yaml</dt>
 <dd>Calculates a greyscale image for the 2MASS J-band. Runs the Montage toolkit commands sequentially.</dd>
 <dt>workflow/montage_parallel.yaml</dt>
-<dd>A parallelized version of <code>workflow/montage.yaml</code> that can be used to run the Montage workflow in a distributed environment. Requires multiple Steep agents to be deployed to unfold its full potential in terms of performance compared to the sequential version, but can be run on a single machine as well.</dd>
+<dd>A parallelized version of <code>workflow/montage.yaml</code> that can be used to run the Montage workflow in a <a href="https://github.com/steep-wms/steep-montage-aws">distributed environment</a>. Requires multiple Steep agents to be deployed to unfold its full potential in terms of performance compared to the sequential version, but can be run on a single machine as well.</dd>
 <dt>workflow/montage_parallel_rgb.yaml</dt>
 <dd>Calculates an RGB image based on the K-, H-, and J-bands. Parallelized version.</dd>
 </dl>
@@ -61,22 +61,28 @@ Sumbit one of the workflows as follows:
 Go to <http://localhost:8080/workflows> to open Steep's web interface and
 monitor the progress of the workflow. Wait until it is completed.
 
+*HINT:* You may follow the instructions in the
+[steep-montage-aws repository](https://github.com/steep-wms/steep-montage-aws)
+if you want to run the parallel workflows on the AWS cloud.
+
 ## Step 4: Extract results
 
-After the workflow has finished you can extract the final mosaic from the Docker
+After the workflow has finished, you can extract the final mosaic from the Docker
 container:
 
     docker cp steep-montage:$(docker exec steep-montage find /tmp -name '*.jpg') .
 
-It should look like this:
-
-![Carina Nebula](result_rgb.jpg "Carina Nebula")
+It should look like the [image below](#final-result).
 
 ## Step 5: Stop Steep
 
 Finally, run the following command to remove the Docker container:
 
     docker kill steep-montage
+
+### Final result
+
+![Carina Nebula](result_rgb.jpg "Carina Nebula")
 
 ## License
 
