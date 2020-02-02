@@ -1,4 +1,4 @@
-# Run the Montage workflow with Steep
+# Run the Montage workflow with Steep [![Actions Status](https://github.com/steep-wms/steep-montage/workflows/CI/badge.svg)](https://github.com/steep-wms/steep-montage/actions)
 
 This repository demonstrates how to run the
 [Montage workflow](http://montage.ipac.caltech.edu/) with
