@@ -1,4 +1,4 @@
-FROM steep/steep:5.0.0
+FROM steep/steep:5.0.1
 
 USER root
 
