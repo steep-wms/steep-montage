@@ -30,3 +30,8 @@
   type: runtime
   scriptFile: conf/plugins/ignoreDiffFitError.kts
   supportedRuntime: ignoreDiffFitError
+
+# removes automatically generated IDs from output paths in process chains
+- name: removeId
+  type: processChainAdapter
+  scriptFile: conf/plugins/removeId.kts

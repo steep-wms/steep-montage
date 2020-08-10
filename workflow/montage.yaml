@@ -1,10 +1,22 @@
 api: 3.1.0
 vars:
-  - id: header_template
-    value: /data/montage/region.hdr
+  - id: survey
+    value: 2mass
+  - id: band
+    value: j
+  - id: location
+    value: "NGC 3372"
+  - id: hdrwidth
+    value: 2.0
+  - id: width
+    value: 2.2
+  - id: height
+    value: 2.2
+  - id: shrink_factor
+    value: 5
 
+  - id: header_template
   - id: raw_images
-    value: /data/montage/raw_j
 
   - id: raw_images_table
     value: /data/montage/rimages_j.tbl
@@ -22,11 +34,41 @@ vars:
   - id: output_images_table
   - id: added_image
   - id: shrunken_image
-  - id: shrink_factor
-    value: 5
   - id: output_image
 
 actions:
+  - type: execute
+    service: mHdr
+    inputs:
+      - id: location
+        var: location
+      - id: width
+        var: hdrwidth
+    outputs:
+      - id: output_file
+        var: header_template
+        prefix: /data/montage/
+
+  - type: execute
+    service: download_band
+    inputs:
+      - id: survey
+        var: survey
+      - id: band
+        var: band
+      - id: location
+        var: location
+      - id: width
+        var: width
+      - id: height
+        var: height
+      - id: header_template
+        var: header_template
+    outputs:
+      - id: output_directory
+        var: raw_images
+        prefix: /data/montage/raw_j/
+
   - type: execute
     service: mProjExec
     inputs:

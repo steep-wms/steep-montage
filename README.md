@@ -4,31 +4,7 @@ This repository demonstrates how to run the
 [Montage workflow](http://montage.ipac.caltech.edu/) with
 [Steep](https://github.com/steep-wms/steep).
 
-## Step 1: Download test data
-
-Before you can run the workflow, you need to download some data. The
-`download_data.sh` script fetches files for a 2.8 square degrees mosaic of
-2MASS images (J-, H-, and K-band) centred on
-NGC 3372 ([Carina Nebula](https://en.wikipedia.org/wiki/Carina_Nebula)).
-
-If you already have the [Montage toolkit](https://github.com/Caltech-IPAC/Montage)
-and [aria2](https://aria2.github.io/) installed on your computer, you can simply run:
-
-    ./download_data.sh
-
-Otherwise, run the script inside a Docker container:
-
-    docker run -it -v $(pwd)/data:/download/data \
-      --entrypoint /download/download_data.sh \
-      steep/steep-montage
-
-*NOTE:* The dataset has a total size of about *1.3 GB*. The download will take
-quite some time (depending on your Internet connection).
-
-**IMPORTANT: the script deletes the contents of the `data` directory! Make sure
-you know what you are doing.**
-
-## Step 2: Run the Docker image
+## Step 1: Run the Docker image
 
 We created a Docker image that contains Steep and the Montage toolkit. Run the
 image in the background with the following command:
@@ -41,7 +17,7 @@ Wait until Steep has started. You can either run `docker logs steep-montage`
 to the see log output or go to <http://localhost:8080> to open Steep's web
 interface.
 
-## Step 3: Submit a workflow
+## Step 2: Submit a workflow
 
 We prepared the following workflows for you:
 
@@ -54,7 +30,7 @@ We prepared the following workflows for you:
 <dd>Calculates an RGB image based on the K-, H-, and J-bands. Parallelized version.</dd>
 </dl>
 
-Sumbit one of the workflows as follows:
+Submit one of the workflows as follows:
 
     curl -X POST http://localhost:8080/workflows --data-binary @workflow/montage_parallel_rgb.yaml
 
@@ -65,7 +41,7 @@ monitor the progress of the workflow. Wait until it is completed.
 [steep-montage-aws repository](https://github.com/steep-wms/steep-montage-aws)
 if you want to run the parallel workflows on the AWS cloud.
 
-## Step 4: Extract results
+## Step 3: Extract results
 
 After the workflow has finished, you can extract the final mosaic from the Docker
 container:
@@ -74,7 +50,7 @@ container:
 
 It should look like the [image below](#final-result).
 
-## Step 5: Stop Steep
+## Step 4: Stop Steep
 
 Finally, run the following command to remove the Docker container:
 
@@ -83,6 +59,42 @@ Finally, run the following command to remove the Docker container:
 ### Final result
 
 ![Carina Nebula](result_rgb.jpg "Carina Nebula")
+
+## Optional: Customizing the source area
+
+By default, the workflows in this repository calculate a 2.8
+square degrees mosaic of 2MASS images (J-, H-, and K-band) centred on
+NGC 3372 ([Carina Nebula](https://en.wikipedia.org/wiki/Carina_Nebula)).
+
+If you want to generate a mosaic for another location or celestial object,
+open one of the workflow YAML files and customize the variables `survey`,
+`location`, `width`, and `height`. Then submit the workflow again. Nothing else
+has to be changed. The workflow dynamically adapts to the new parameters.
+
+## Optional: Download test data
+
+The workflow in this repository is fully self-contained. It automatically
+downloads the raw images and then generates the Mosaic. If the workflow has
+been executed before, it uses the already downloaded imagery from the `data`
+directory and skips the download.
+
+If you wish, you can also download the raw images manually before executing the
+workflow. If you already have the [Montage toolkit](https://github.com/Caltech-IPAC/Montage)
+and [aria2](https://aria2.github.io/) installed on your computer, you can simply run:
+
+    ./scripts/download_data.sh
+
+Otherwise, run the script inside a Docker container:
+
+    docker run -it -v $(pwd)/data:/download/data \
+      --entrypoint /download/scripts/download_data.sh \
+      steep/steep-montage
+
+*NOTE:* The dataset has a total size of about *1.3 GB*. The download will take
+quite some time (depending on your Internet connection).
+
+**IMPORTANT: the script deletes the contents of the `data` directory! Make sure
+you know what you are doing.**
 
 ## License
 

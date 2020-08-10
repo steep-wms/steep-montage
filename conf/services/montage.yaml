@@ -1,3 +1,32 @@
+- id: mHdr
+  name: mHdr
+  description: Create a FITS header template from user-supplied parameters
+  path: mHdr
+  runtime: other
+
+  parameters:
+    - id: location
+      name: Location
+      description: Object string or coordinate location
+      type: input
+      cardinality: 1..1
+      data_type: string
+
+    - id: width
+      name: Width
+      description: Width (x-axis) of area in degrees
+      type: input
+      cardinality: 1..1
+      data_type: string
+
+    - id: output_file
+      name: Output file
+      description: Path to output header template
+      type: output
+      cardinality: 1..1
+      data_type: file
+      file_suffix: .hdr
+
 - id: mProjExec
   name: mProjExec
   description: A simple executive which runs mProject for each image in an image metadata table
@@ -650,3 +679,59 @@
       label: -out
       data_type: file
       file_suffix: .jpg
+
+- id: download_band
+  name: Download band
+  description: Download the raw images of a single band
+  path: /download/scripts/download_band.sh
+  runtime: other
+
+  parameters:
+    - id: survey
+      name: Survey
+      description: Can be one of "2mass", "dss", "sdss", "dposs"
+      type: input
+      cardinality: 1..1
+      data_type: string
+
+    - id: band
+      name: Band
+      description: "Case insensitive - can be one of: j, h, k (2MASS); u, g, r, i, z (SDSS); f, j, n (DPOSS); DSS1, DSS1R, DSS1B, DSS2, DSS2B, DSS2R, DSS2IR (DSS)"
+      type: input
+      cardinality: 1..1
+      data_type: string
+
+    - id: location
+      name: Location
+      description: Object name or coordinate string to be resolved by NED
+      type: input
+      cardinality: 1..1
+      data_type: string
+
+    - id: width
+      name: Width
+      description: Width of area of interest, in degrees
+      type: input
+      cardinality: 1..1
+      data_type: string
+
+    - id: height
+      name: Height
+      description: Height of area of interest, in degrees
+      type: input
+      cardinality: 1..1
+      data_type: string
+
+    - id: header_template
+      name: Header template
+      description: FITS header template to be used in generation of output FITS
+      type: input
+      cardinality: 1..1
+      data_type: file
+
+    - id: output_directory
+      name: Output directory
+      description: Directory where the downloaded images should be stored
+      type: output
+      cardinality: 1..1
+      data_type: directory

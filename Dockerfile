@@ -19,7 +19,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /download
-COPY download_data.sh /download
+COPY scripts /download/scripts
 
 USER steep
 
