@@ -186,3 +186,4 @@ actions:
     outputs:
       - id: output_image
         var: output_image
+        prefix: output_image_

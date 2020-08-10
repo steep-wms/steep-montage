@@ -46,7 +46,7 @@ if you want to run the parallel workflows on the AWS cloud.
 After the workflow has finished, you can extract the final mosaic from the Docker
 container:
 
-    docker cp steep-montage:$(docker exec steep-montage find /tmp -name '*.jpg') .
+    docker cp steep-montage:$(docker exec steep-montage find /tmp -name 'output*.jpg') .
 
 It should look like the [image below](#final-result).
 
