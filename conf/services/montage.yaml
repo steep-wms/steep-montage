@@ -8,7 +8,7 @@
     - id: useQL
       name: mProjectQL
       description: Use mProjectQL for reprojections
-      type: argument
+      type: input
       cardinality: 1..1
       label: -q
       data_type: boolean
@@ -283,7 +283,7 @@
     - id: stat_dir
       name: Stat dir
       description: Directory containing the stat files
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: ""
@@ -366,7 +366,7 @@
     - id: table_mode
       name: Table mode
       description: true if command line contains tables instead of plain correction values
-      type: argument
+      type: input
       cardinality: 1..1
       label: -t
       data_type: boolean
@@ -469,7 +469,7 @@
       description: >-
         Size of blocks, in pixels, to average. File size will be reduced
         by 1/factor squared
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: number
 
@@ -483,7 +483,7 @@
     - id: color_table
       name: Color table
       description: Color table ID
-      type: argument
+      type: input
       cardinality: 1..1
       label: -ct
       data_type: number
@@ -500,7 +500,7 @@
     - id: min
       name: Stretch minimum
       description: Stretch minimum
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: -2s
@@ -508,7 +508,7 @@
     - id: max
       name: Stretch maximum
       description: Stretch maximum
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: max
@@ -516,7 +516,7 @@
     - id: mode
       name: Stretch mode
       description: Stretch mode
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: gaussian-log
@@ -540,7 +540,7 @@
     - id: true_color
       name: True color
       description: Enables true color
-      type: argument
+      type: input
       cardinality: 1..1
       label: -t
       data_type: number
@@ -557,7 +557,7 @@
     - id: r_min
       name: R Stretch minimum
       description: Stretch minimum for the R channel
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: 0s
@@ -565,7 +565,7 @@
     - id: r_max
       name: R Stretch maximum
       description: Stretch maximum for the R channel
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: max
@@ -573,7 +573,7 @@
     - id: r_mode
       name: R Stretch mode
       description: Stretch mode for the R channel
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: gaussian-log
@@ -589,7 +589,7 @@
     - id: g_min
       name: G Stretch minimum
       description: Stretch minimum for the G channel
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: 0s
@@ -597,7 +597,7 @@
     - id: g_max
       name: G Stretch maximum
       description: Stretch maximum for the G channel
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: max
@@ -605,7 +605,7 @@
     - id: g_mode
       name: G Stretch mode
       description: Stretch mode for the G channel
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: gaussian-log
@@ -621,7 +621,7 @@
     - id: b_min
       name: B Stretch minimum
       description: Stretch minimum for the B channel
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: 0s
@@ -629,7 +629,7 @@
     - id: b_max
       name: B Stretch maximum
       description: Stretch maximum for the B channel
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: max
@@ -637,7 +637,7 @@
     - id: b_mode
       name: B Stretch mode
       description: Stretch mode for the B channel
-      type: argument
+      type: input
       cardinality: 1..1
       data_type: string
       default: gaussian-log

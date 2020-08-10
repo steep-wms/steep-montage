@@ -390,12 +390,11 @@ actions:
 
   - type: execute
     service: mShrink
-    parameters:
-      - id: factor
-        var: shrink_factor
     inputs:
       - id: input_image
         var: j_added_image
+      - id: factor
+        var: shrink_factor
     outputs:
       - id: output_image
         var: j_shrunken_image
