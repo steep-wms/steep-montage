@@ -1,10 +1,10 @@
 import io.vertx.core.Vertx
-import io.vertx.kotlin.core.file.OpenOptions
 import io.vertx.kotlin.core.file.closeAwait
 import io.vertx.kotlin.core.file.deleteAwait
 import io.vertx.kotlin.core.file.existsAwait
 import io.vertx.kotlin.core.file.mkdirsAwait
 import io.vertx.kotlin.core.file.openAwait
+import io.vertx.kotlin.core.file.openOptionsOf
 import io.vertx.kotlin.core.json.json
 import io.vertx.kotlin.core.json.obj
 import java.io.File
@@ -13,6 +13,8 @@ import model.processchain.ProcessChain
 
 suspend fun createDiffFitInfo(output: Argument, processChain: ProcessChain,
     vertx: Vertx): List<Any> {
+  val agentId = vertx.orCreateContext.config().getString(ConfigConstants.AGENT_ID)
+
   val mDiffFit = processChain.executables.find { e -> e.arguments.any { it === output } }!!
   val inputImages = mDiffFit.arguments.filter { it.id == "input_image" }.map { it.variable.value }
   val outputStats = mDiffFit.arguments.find { it.id == "output_stats" }!!.variable.value
@@ -35,8 +37,8 @@ suspend fun createDiffFitInfo(output: Argument, processChain: ProcessChain,
   }
   val jsonDir = File(File(outputImage).parentFile, "json")
   fs.mkdirsAwait(jsonDir.path)
-  val f = fs.openAwait(File(jsonDir, "${Main.agentId}.json").path,
-      OpenOptions(append = true))
+  val f = fs.openAwait(File(jsonDir, "${agentId}.json").path,
+      openOptionsOf(append = true))
   f.write(result.toBuffer().appendString("\n"))
   f.closeAwait()
 
