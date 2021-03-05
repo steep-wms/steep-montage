@@ -83,7 +83,7 @@
   name: mProjectPP
   description: Reprojects a single image to the scale defined in a pseudo-FITS header template file
   path: mProjectPP
-  runtime: other
+  runtime: ignoreError
 
   parameters:
     - id: input_image
@@ -98,7 +98,7 @@
       description: Path of output FITS file to be created
       type: output
       cardinality: 1..1
-      data_type: file
+      data_type: fileOrEmptyList
       file_suffix: .fits
 
     - id: header_template
@@ -178,7 +178,7 @@
   name: mDiffFit
   description: Runs both mDiff and mFitplane on an mOverlaps pair
   path: mDiffFit
-  runtime: ignoreDiffFitError
+  runtime: ignoreError
 
   parameters:
     - id: output_stats

@@ -25,11 +25,11 @@
   scriptFile: conf/plugins/joinDiffFitResults.kts
   supportedDataType: joinedDiffFitResults
 
-# ignores certain errors from mDiffFit
-- name: ignoreDiffFitError
+# ignores certain errors from mDiffFit and mProject
+- name: ignoreError
   type: runtime
-  scriptFile: conf/plugins/ignoreDiffFitError.kts
-  supportedRuntime: ignoreDiffFitError
+  scriptFile: conf/plugins/ignoreError.kts
+  supportedRuntime: ignoreError
 
 # removes automatically generated IDs from output paths in process chains
 - name: removeId
