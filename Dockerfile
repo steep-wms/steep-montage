@@ -28,3 +28,4 @@ COPY conf/services/montage.yaml /steep/conf/services/montage.yaml
 
 ENV JAVA_OPTS="-Xmx8192m -Xms1024m -Dvertx.disableDnsResolver=true"
 ENV PATH="/opt/Montage/bin:${PATH}"
+ENV STEEP_LOGS_PROCESSCHAINS_ENABLED=true
