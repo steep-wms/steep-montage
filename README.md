@@ -10,12 +10,17 @@ We created a Docker image that contains Steep and the Montage toolkit. Run the
 image in the background with the following command:
 
     docker run --name steep-montage --rm -d -p 8080:8080 \
-      -e STEEP_HTTP_HOST=0.0.0.0 -v $(pwd)/data:/data/montage \
+      -e STEEP_HTTP_HOST=0.0.0.0 -e STEEP_AGENT_INSTANCES=4 \
+      -v $(pwd)/data:/data/montage \
       steep/steep-montage
 
 Wait until Steep has started. You can either run `docker logs steep-montage`
 to the see log output or go to <http://localhost:8080> to open Steep's web
 interface.
+
+*Hint: The parameter `STEEP_AGENT_INSTANCES` can be used to control how many
+process chains run in parallel. Set this to the number of cores in your system
+to speed up workflow execution.*
 
 ## Step 2: Submit a workflow
 
