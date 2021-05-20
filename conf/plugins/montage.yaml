@@ -1,37 +1,37 @@
 # adds an "XXX_area.fits" file for every "XXX.fits" file
 - name: outputFitsImage
   type: outputAdapter
-  scriptFile: conf/plugins/outputFitsImage.kts
+  scriptFile: conf/plugins/outputFitsImage.kt
   supportedDataType: fits
 
 # an output adapter that reads a table created by mOverlaps and extracts
 # pairs of FITS images
 - name: splitOverlapTable
   type: outputAdapter
-  scriptFile: conf/plugins/splitOverlapTable.kts
+  scriptFile: conf/plugins/splitOverlapTable.kt
   supportedDataType: overlapTable
 
 # overwrite output image of mDiffFit with a text file containing input image
 # pair and stats file
 - name: createDiffFitInfo
   type: outputAdapter
-  scriptFile: conf/plugins/createDiffFitInfo.kts
+  scriptFile: conf/plugins/createDiffFitInfo.kt
   supportedDataType: diffFit
 
 # joins results of the createDiffFitInfo output adapter to a file that can
 # be read by mConcatFit
 - name: joinDiffFitResults
   type: outputAdapter
-  scriptFile: conf/plugins/joinDiffFitResults.kts
+  scriptFile: conf/plugins/joinDiffFitResults.kt
   supportedDataType: joinedDiffFitResults
 
 # ignores certain errors from mDiffFit and mProject
 - name: ignoreError
   type: runtime
-  scriptFile: conf/plugins/ignoreError.kts
+  scriptFile: conf/plugins/ignoreError.kt
   supportedRuntime: ignoreError
 
 # removes automatically generated IDs from output paths in process chains
 - name: removeId
   type: processChainAdapter
-  scriptFile: conf/plugins/removeId.kts
+  scriptFile: conf/plugins/removeId.kt
