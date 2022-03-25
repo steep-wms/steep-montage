@@ -1,9 +1,8 @@
 import io.vertx.core.Vertx
 import io.vertx.core.parsetools.RecordParser
-import io.vertx.kotlin.core.file.OpenOptions
-import io.vertx.kotlin.core.file.closeAwait
-import io.vertx.kotlin.core.file.openAwait
-import io.vertx.kotlin.coroutines.toChannel
+import io.vertx.kotlin.core.file.openOptionsOf
+import io.vertx.kotlin.coroutines.await
+import io.vertx.kotlin.coroutines.toReceiveChannel
 import model.processchain.Argument
 import model.processchain.ProcessChain
 
@@ -41,11 +40,11 @@ fun parseLine(line: String, header: List<Pair<String, Int>>): Map<String, String
  */
 suspend fun <T> parseTable(table: String, vertx: Vertx, f: (Map<String, String>) -> T): List<T> {
   // open table
-  val options = OpenOptions(read = true, write = false, create = false)
-  val file = vertx.fileSystem().openAwait(table, options)
+  val options = openOptionsOf(read = true, write = false, create = false)
+  val file = vertx.fileSystem().open(table, options).await()
   try {
     val recordParser = RecordParser.newDelimited("\n", file)
-    val channel = recordParser.toChannel(vertx)
+    val channel = recordParser.toReceiveChannel(vertx)
 
     // read table line by line
     val result = mutableListOf<T>()
@@ -61,7 +60,7 @@ suspend fun <T> parseTable(table: String, vertx: Vertx, f: (Map<String, String>)
 
     return result
   } finally {
-    file.closeAwait()
+    file.close().await()
   }
 }
 

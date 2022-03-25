@@ -3,17 +3,14 @@ import io.vertx.core.Vertx
 import io.vertx.core.buffer.Buffer
 import io.vertx.core.json.JsonObject
 import io.vertx.core.parsetools.RecordParser
-import io.vertx.kotlin.core.file.OpenOptions
-import io.vertx.kotlin.core.file.closeAwait
-import io.vertx.kotlin.core.file.openAwait
-import io.vertx.kotlin.core.file.readFileAwait
-import io.vertx.kotlin.core.file.writeFileAwait
+import io.vertx.kotlin.core.file.openOptionsOf
 import io.vertx.kotlin.core.json.json
 import io.vertx.kotlin.core.json.obj
-import io.vertx.kotlin.coroutines.toChannel
-import java.io.File
+import io.vertx.kotlin.coroutines.await
+import io.vertx.kotlin.coroutines.toReceiveChannel
 import model.processchain.Argument
 import model.processchain.ProcessChain
+import java.io.File
 
 /**
  * Parse table header and return a list of pairs representing the
@@ -49,11 +46,11 @@ fun parseLine(line: String, header: List<Pair<String, Int>>): Map<String, String
  */
 suspend fun <T> parseTable(table: String, vertx: Vertx, f: (Map<String, String>) -> T): List<T> {
   // open table
-  val options = OpenOptions(read = true, write = false, create = false)
-  val file = vertx.fileSystem().openAwait(table, options)
+  val options = openOptionsOf(read = true, write = false, create = false)
+  val file = vertx.fileSystem().open(table, options).await()
   try {
     val recordParser = RecordParser.newDelimited("\n", file)
-    val channel = recordParser.toChannel(vertx)
+    val channel = recordParser.toReceiveChannel(vertx)
 
     // read table line by line
     val result = mutableListOf<T>()
@@ -69,7 +66,7 @@ suspend fun <T> parseTable(table: String, vertx: Vertx, f: (Map<String, String>)
 
     return result
   } finally {
-    file.closeAwait()
+    file.close().await()
   }
 }
 
@@ -88,8 +85,8 @@ suspend fun joinDiffFitResults(output: Argument, processChain: ProcessChain,
 
   val fs = vertx.fileSystem()
   val entries = inputFiles.flatMap { inputFile ->
-    val lines = fs.readFileAwait(inputFile).toString().split("\n")
-    lines.filter { !it.isEmpty() }.map { JsonObject(it) }
+    val lines = fs.readFile(inputFile).await().toString().split("\n")
+    lines.filter { it.isNotEmpty() }.map { JsonObject(it) }
   }.map { obj ->
     val cntr1 = projectedImages.getValue(obj.getString("plus"))
     val cntr2 = projectedImages.getValue(obj.getString("minus"))
@@ -102,7 +99,7 @@ suspend fun joinDiffFitResults(output: Argument, processChain: ProcessChain,
     }
   }
 
-  val statWidth = entries.map { it.getString("stat").length }.max() ?: 0
+  val statWidth = entries.maxOfOrNull { it.getString("stat").length } ?: 0
 
   val result = StringBuilder()
   result
@@ -124,7 +121,7 @@ suspend fun joinDiffFitResults(output: Argument, processChain: ProcessChain,
         .append("\n")
   }
 
-  fs.writeFileAwait(outputFile, Buffer.buffer(result.toString()))
+  fs.writeFile(outputFile, Buffer.buffer(result.toString())).await()
 
   return listOf(outputFile)
 }
