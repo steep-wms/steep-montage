@@ -1,4 +1,3 @@
-import io.vertx.core.Vertx
 import model.processchain.Executable
 import model.processchain.ProcessChain
 
@@ -6,7 +5,7 @@ fun needsProcessing(e: Executable): Boolean {
   return e.serviceId == "download_band" || e.serviceId == "mProjExec"
 }
 
-suspend fun removeId(processChains: List<ProcessChain>, vertx: Vertx): List<ProcessChain> {
+suspend fun removeId(processChains: List<ProcessChain>): List<ProcessChain> {
   if (!processChains.any { pc -> pc.executables.any(::needsProcessing) }) {
     return processChains
   }
