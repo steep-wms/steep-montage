@@ -69,7 +69,7 @@
       description: Directory in which to create reprojected images
       type: output
       cardinality: 1..1
-      dataType: directory
+      dataType: file
 
     - id: stats_table
       name: Stats table

@@ -1,87 +1,15 @@
-api: 3.1.0
+api: 4.5.0
 vars:
   - id: survey
     value: 2mass
-  - id: band_k
-    value: k
-  - id: band_h
-    value: h
-  - id: band_j
-    value: j
   - id: location
     value: "NGC 3372"
-  - id: hdrwidth
-    value: 2.0
   - id: width
     value: 2.2
   - id: height
     value: 2.2
   - id: shrink_factor
     value: 5
-
-  - id: header_template
-  - id: k_raw_images
-  - id: h_raw_images
-  - id: j_raw_images
-
-  - id: k_projected_image
-  - id: k_raw_image
-  - id: k_projected_images
-  - id: k_projected_images_table
-  - id: k_overlap_table
-  - id: k_diff_fit_stats
-  - id: k_fit_output_image
-  - id: k_all_diff_fit_results
-  - id: k_joined_diff_fit_results
-  - id: k_concatenated_fits
-  - id: k_corrections_table
-  - id: k_output_images
-  - id: k_overlap_table_i
-  - id: k_projected_images_i
-  - id: k_no_background_image
-  - id: k_output_images_table
-  - id: k_added_image
-  - id: k_shrunken_image
-
-  - id: h_projected_image
-  - id: h_raw_image
-  - id: h_projected_images
-  - id: h_projected_images_table
-  - id: h_overlap_table
-  - id: h_diff_fit_stats
-  - id: h_fit_output_image
-  - id: h_all_diff_fit_results
-  - id: h_joined_diff_fit_results
-  - id: h_concatenated_fits
-  - id: h_corrections_table
-  - id: h_output_images
-  - id: h_overlap_table_i
-  - id: h_projected_images_i
-  - id: h_no_background_image
-  - id: h_output_images_table
-  - id: h_added_image
-  - id: h_shrunken_image
-
-  - id: j_projected_image
-  - id: j_raw_image
-  - id: j_projected_images
-  - id: j_projected_images_table
-  - id: j_overlap_table
-  - id: j_diff_fit_stats
-  - id: j_fit_output_image
-  - id: j_all_diff_fit_results
-  - id: j_joined_diff_fit_results
-  - id: j_concatenated_fits
-  - id: j_corrections_table
-  - id: j_output_images
-  - id: j_overlap_table_i
-  - id: j_projected_images_i
-  - id: j_no_background_image
-  - id: j_output_images_table
-  - id: j_added_image
-  - id: j_shrunken_image
-
-  - id: output_image
 
 actions:
   - type: execute
@@ -90,7 +18,7 @@ actions:
       - id: location
         var: location
       - id: width
-        var: hdrwidth
+        value: 2.0
     outputs:
       - id: output_file
         var: header_template
@@ -103,7 +31,7 @@ actions:
       - id: survey
         var: survey
       - id: band
-        var: band_k
+        value: k
       - id: location
         var: location
       - id: width
@@ -273,7 +201,7 @@ actions:
       - id: survey
         var: survey
       - id: band
-        var: band_h
+        value: h
       - id: location
         var: location
       - id: width
@@ -443,7 +371,7 @@ actions:
       - id: survey
         var: survey
       - id: band
-        var: band_j
+        value: j
       - id: location
         var: location
       - id: width

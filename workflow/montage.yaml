@@ -1,4 +1,4 @@
-api: 3.1.0
+api: 4.5.0
 vars:
   - id: survey
     value: 2mass
@@ -6,35 +6,8 @@ vars:
     value: j
   - id: location
     value: "NGC 3372"
-  - id: hdrwidth
-    value: 2.0
-  - id: width
-    value: 2.2
-  - id: height
-    value: 2.2
   - id: shrink_factor
     value: 5
-
-  - id: header_template
-  - id: raw_images
-
-  - id: raw_images_table
-    value: /data/montage/rimages_j.tbl
-
-  - id: projected_images
-  - id: stats_file
-  - id: useQL
-    value: true
-  - id: projected_images_table
-  - id: overlap_table
-  - id: diff_working_directory
-  - id: fitting_table
-  - id: corrections_table
-  - id: output_images
-  - id: output_images_table
-  - id: added_image
-  - id: shrunken_image
-  - id: output_image
 
 actions:
   - type: execute
@@ -43,7 +16,7 @@ actions:
       - id: location
         var: location
       - id: width
-        var: hdrwidth
+        value: 2.0
     outputs:
       - id: output_file
         var: header_template
@@ -59,9 +32,9 @@ actions:
       - id: location
         var: location
       - id: width
-        var: width
+        value: 2.2
       - id: height
-        var: height
+        value: 2.2
       - id: header_template
         var: header_template
     outputs:
@@ -75,7 +48,7 @@ actions:
       - id: rawdir
         var: raw_images
       - id: images_table
-        var: raw_images_table
+        value: /data/montage/rimages_j.tbl
       - id: header_template
         var: header_template
     outputs:
@@ -85,7 +58,7 @@ actions:
         var: stats_file
     parameters:
       - id: useQL
-        var: useQL
+        value: true
 
   - type: execute
     service: mImgtbl

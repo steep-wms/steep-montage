@@ -1,4 +1,4 @@
-api: 3.1.0
+api: 4.5.0
 vars:
   - id: survey
     value: 2mass
@@ -6,36 +6,8 @@ vars:
     value: j
   - id: location
     value: "NGC 3372"
-  - id: hdrwidth
-    value: 2.0
-  - id: width
-    value: 2.2
-  - id: height
-    value: 2.2
   - id: shrink_factor
     value: 5
-
-  - id: header_template
-  - id: j_raw_images
-  - id: j_projected_image
-  - id: j_raw_image
-  - id: j_projected_images
-  - id: j_projected_images_table
-  - id: j_overlap_table
-  - id: j_diff_fit_stats
-  - id: j_fit_output_image
-  - id: j_all_diff_fit_results
-  - id: j_joined_diff_fit_results
-  - id: j_concatenated_fits
-  - id: j_corrections_table
-  - id: j_output_images
-  - id: j_overlap_table_i
-  - id: j_projected_images_i
-  - id: j_no_background_image
-  - id: j_output_images_table
-  - id: j_added_image
-  - id: j_shrunken_image
-  - id: output_image
 
 actions:
   - type: execute
@@ -44,7 +16,7 @@ actions:
       - id: location
         var: location
       - id: width
-        var: hdrwidth
+        value: 2.0
     outputs:
       - id: output_file
         var: header_template
@@ -60,9 +32,9 @@ actions:
       - id: location
         var: location
       - id: width
-        var: width
+        value: 2.2
       - id: height
-        var: height
+        value: 2.2
       - id: header_template
         var: header_template
     outputs:
